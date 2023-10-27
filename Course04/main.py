@@ -42,7 +42,7 @@ print(type(is_admin))
 is_admin = 5
 print(type(is_admin))
 
-# Python is also statically-typed
+# Python is strongly-typed
 # when it comes to conversions
 # (does not use implicit conversions)
 message = "age: " + str(age)
@@ -75,6 +75,7 @@ print(byte_literal)
 
 hello = "Hello"
 # string slicing
+print(hello[1])
 print(hello[1:4])
 print(hello[1:])
 print(hello[:2])
@@ -94,4 +95,5 @@ text = ('Hello %s, you have %i messages' % (vb1, vb2))
 print(text)
 vb3 = f"{vb1} has \n{vb2} \"apples\"\\'oranges'"
 print(vb3)
+
 
