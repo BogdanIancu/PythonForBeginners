@@ -1,14 +1,22 @@
 import os
 from pathlib import Path
 
-try:
-    my_list = [6, 0, 3, 2]
-    # print(my_list[5])
-    print(my_list[0] / my_list[1])
-except IndexError as err:
-    print(f"Check your index! Details: {err.args[0]}")
-except:
-    print("Something bad happened")
+
+def my_function():
+    try:
+        my_list = [6, 0, 3, 2]
+        print(my_list[2])
+        print(my_list[0] / my_list[3])
+        raise KeyError
+    except (IndexError, KeyError) as err:
+        print(f"Check your index! Details: {err.args}")
+    except:
+        print("Something bad happened")
+    finally:
+        print("This will be always executed")
+
+
+my_function()
 
 text_file = open("file.txt", "w")
 text_file.write("This is a message\n")
